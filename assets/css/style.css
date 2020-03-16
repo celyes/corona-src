@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css');
+body{
+    font-family: 'Markazi Text', serif;
+}
+.navbar-toggler{
+  border: none;
+}
+.navbar, .cards-row {
+  direction: rtl;
+}
+.nav-item:hover{
+  background: rgba(255,255,255,0.4);
+}
+.nav-link{
+  font-size: 24px;
+}
+.title{
+  font-weight: 400;
+  color: #222;
+}
+.card{
+  border: none !important;
+}
+.bg-light{
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+.case-number{
+  font-size: 66px;
+}
+.bg-primary{background-image: linear-gradient(-225deg, #007BFF 0%, #1D8FE1 48%, #625EB1 100%);
+}
+.bg-warning{
+  background-image: linear-gradient(to bottom, #ffc107 0%, #f9d423 100%);
+}
+.bg-danger{
+  background-image: linear-gradient(135deg, #dc3545 0%, #ff0844 100%);
+}
+.bg-success{
+  background-image: linear-gradient(-60deg, #0fd850 0%, #28a745 100%);
+}
