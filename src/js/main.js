@@ -1,20 +1,3 @@
-let ctx = document.getElementById("myChart").getContext("2d");
-let data = {
-    labels: ["الحالات المؤكدة", "الحالات المتوفاة", "الحالات التي شفيت", "الحالات قيد التعافي"],
-    datasets: [{
-        label: "الاصابات (الحالات)",
-        backgroundColor: ["#dc3545", "#ffc107", "#0fd850", "#007BFF"],
-        data: [54, 4, 12, 38]
-    }]
-};
-let options = {};
-let myChart = new Chart(ctx, {
-  type: "doughnut",
-  data: data,
-  options: options
-});
-
-// fetch
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     return response.json();
   })
@@ -26,5 +9,20 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
         cases.innerText = data.cases;
         deaths.innerText = data.deaths;
         recovered.innerText = data.recovered;
-        todayCases.innerText = data.todayCases;
+        todayCases.innerText = data.todayCases
+        document.getElementById("myChart").getContext("2d"),
+        data = {
+            labels: ["الحالات المؤكدة", "الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
+            datasets: [{
+                label: "الاصابات (الحالات)",
+                backgroundColor: ["#dc3545", "#ffc107", "#0fd850", "#007BFF"],
+                data: [data.cases, data.deaths, data.recovered, data.todayCases]
+            }]
+        },
+        options = {},
+        myChart = new Chart(ctx, {
+          type: "doughnut",
+          data: data,
+          options: options
+        });
   });
