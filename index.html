@@ -43,7 +43,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="card mt-4 bg-warning">
             <div class="card-body">
@@ -60,23 +59,37 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="card mt-4 bg-primary">
             <div class="card-body">
-              <h2 class="card-title text-white"> الحالات المستبعدة</h2>
-              <h1 class="case-number text-white">/</h1>
+              <h2 class="card-title text-white"> الحالات قيد التعافي</h2>
+              <h1 class="case-number text-white">38</h1>
             </div>
           </div>
         </div>
       </div>
+      <div class="row pt-4 chart-row pt-5">
+        <div class="card col-md-8 offset-md-2 col-sm-12">
+          <div class="card-body text-center">
+            <h4>عدد الحالات المؤكدة و المتوفاة و التي شفيت</h4>
+            <br>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
       <div class="row">
         <div class="col-xs-12 col-sm-8 offset-sm-2 text-center pt-5">
           <p>ﻻ يتبع هذا الموقع أي جهة رسمية و هو مساهمة شخصية من المطور- يتم تحديث الإحصائيات بشكل دوري وفق ما تعلنه وزارة الصحة</p>
         </div>
       </div>
+      <br><br>
+      <br>
     </div>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="/corona/assets/js/main.js"></script>
   </body>
 </html>
