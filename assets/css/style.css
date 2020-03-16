@@ -10,10 +10,17 @@ section, .navbar, .cards-row, .title, .paragraph, .list{
   direction: rtl;
 }
 .list li{
-  font-size: 24px;
+  font-size: 22px;
 }
-.paragraph{
-  line-height: 2.5rem;
+.list li a{
+  color: #27b5bb;
+}
+section h2{
+  color: #27b5bb;
+}
+.paragraph, .list{
+  line-height: 3rem;
+  font-size: 22px;
 }
 .nav-item:hover{
   background: rgba(255,255,255,0.4);
