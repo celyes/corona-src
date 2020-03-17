@@ -1,3 +1,4 @@
+if(window.top != window.self){top.location.href = document.location.href;}
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     return response.json();
   })
