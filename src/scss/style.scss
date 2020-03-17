@@ -4,6 +4,8 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css");
 
+@import url("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
+
 body {
   font-family: "Markazi Text", serif;
 }
@@ -81,4 +83,11 @@ section h2 {
 
 .timeline-info {
   direction: rtl;
+}
+.map-container{
+  height: 650px;
+}
+#map{
+  width: 100vw;
+  height: 100%;
 }

@@ -1,4 +1,7 @@
 if(window.top != window.self){top.location.href = document.location.href;}
+
+let addressPoints = require('./addresses.js');
+
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     return response.json();
   })
@@ -29,3 +32,18 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
           options: options
         });
   });
+
+// map
+let mymap = L.map('map').setView([28.50, 3.6], 4.5); // @29.7923208,-2.1006385,5.25z
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/streets-v11',
+    maxZoom: 18,
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiY2VseWVzIiwiYSI6ImNrN3Z0NjY3cjFjMnIzbnNmYWp2MHc0bDcifQ.lZykGC-yHpwcM6GsOX-GMQ'
+}).addTo(mymap);
+/**addressPoints = addressPoints.map(p => [p[0], p[1]]);
+L.heatLayer(addressPoints).addTo(mymap);
+*/
+let heat = L.heatLayer(addressPoints, {radius: 40}).addTo(mymap);

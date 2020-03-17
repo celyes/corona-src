@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="إحصائيات فيروس كورونا في الجزائر" />
     <meta property="og:description" content="إحصائيات موثقة من وزارة الصحة حول داء كورونا المستجد" />
-    <meta property="og:image" content="https://celyes.github.io/assets/img/og-image.png">
+    <meta property="og:image" content="https://celyes.github.ioassets/img/og-image.png">
     <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="shortcut icon" href="/assets/img/corona.png">
     <title>إحصائيات فيروس كورونا في الجزائر</title>
@@ -33,6 +33,9 @@
               <a class="nav-link px-md-4 py-4 active" href="#">الرئيسية</a>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link px-md-4 py-4 active" href="#map-container">الخريطة الحرارية</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link px-md-4 py-4 active" href="tips.html">نصائح للوقاية</a>
             </li>
@@ -91,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="row pt-4 chart-row pt-5">
+      <div class="row chart-row pt-5">
         <div class="card col-md-8 offset-md-2 col-sm-12">
           <div class="card-body text-center">
             <h4>عدد الحالات المؤكدة و المتوفاة و التي شفيت</h4>
@@ -99,8 +102,11 @@
             <canvas id="myChart"></canvas>
           </div>
         </div>
-      </div>
 
+      </div>
+      <div class="row map-container pt-5 mt-5" id="map-container">
+          <div class="col-md-12" id="map"></div>
+      </div>
       <br><br>
       <div class="row">
         <div class="col-xs-12 col-sm-8 offset-sm-2 text-center pt-5">
@@ -114,6 +120,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
     <script src="assets/js/app.bundle.js"></script>
   </body>
 </html>
