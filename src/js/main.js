@@ -15,7 +15,7 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
             labels: ["الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
             datasets: [{
                 label: "الاصابات (الحالات)",
-                backgroundColor: ["#ffc107", "#0fd850", "#007BFF"],
+                backgroundColor: ["#ffc107", "#0fd850", "#dc3545"],
                 data: [data.deaths, data.recovered, data.todayCases]
             }]
         },
