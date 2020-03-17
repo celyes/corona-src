@@ -21,7 +21,7 @@
     "minimist": ">=1.2.2"
   },
   "scripts": {
-    "webpack": "webpack --mode development",
+    "webpack": "webpack",
     "start": "http-server"
   },
   "repository": {
