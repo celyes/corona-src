@@ -1,7 +1,8 @@
 if(window.top != window.self){top.location.href = document.location.href;}
 
-let addressPoints = require('./addresses.js');
+import { heatCases } from './addresses' as addressPoints;
 
+let casesTable = require('./casestable.js');
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     return response.json();
   })

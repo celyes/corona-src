@@ -18,13 +18,16 @@
         ["21",36.8799,6.9075, 3]
   ];
 
-  let exported = [];
+  let heatCases = [];
   cases.forEach((x)=> {
     for(let i = 0; i < (x[3] * 15); i++){
       exported.push([x[1], x[2], 30]);
     }
   })
-  module.exports = exported;
+  module.exports = {
+    heatCases,
+    cases
+  };
 })()
 
 /*module.exports = [
