@@ -58,4 +58,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoiY2VseWVzIiwiYSI6ImNrN3Z0NjY3cjFjMnIzbnNmYWp2MHc0bDcifQ.lZykGC-yHpwcM6GsOX-GMQ'
 }).addTo(infomap);
-L.circle([28.50, 3.6], {radius: 50}).addTo(infomap);
+
+L.circle([28.50, 3.6], {
+    color: "red",
+    fillColor: "#f03",
+    fillOpacity: 0.5,
+    radius: 200
+}).addTo(infomap);
