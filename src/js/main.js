@@ -35,7 +35,7 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     options: {}
   });
 }).catch((e)=> {
-  alert("خطأ في جلب البيانات. أعد المحاولة لاحقاً");
+  alert("خطأ في جلب البيانات. لن يتم تحديث البيانات بشكل تلقائي");
 });
 
 
