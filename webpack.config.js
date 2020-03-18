@@ -3,6 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry:[
       __dirname + '/src/js/main.js',
+      __dirname + '/src/js/casestable.js',
       __dirname + '/src/scss/style.scss'
     ],
     output: {

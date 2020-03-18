@@ -1,41 +1,43 @@
 if(window.top != window.self){top.location.href = document.location.href;}
 
-import { addressPoints } from './addresses';
 
-let casesTable = require('./casestable.js'),
-    cases = document.querySelector("#cases"),
-    deaths = document.querySelector("#deaths"),
-    total = document.querySelector("#total"),
-    recovered = document.querySelector("#recovered"),
-    todayCases = document.querySelector("#todayCases");
+import { addressPoints } from './addresses';
 
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   response.json();
 }).then((data) => {
+  // data
+      cases = document.querySelector("#cases"),
+      deaths = document.querySelector("#deaths"),
+      total = document.querySelector("#total"),
+      recovered = document.querySelector("#recovered"),
+      todayCases = document.querySelector("#todayCases");
+
   cases.innerText = data.cases - (data.deaths + data.recovered);
   deaths.innerText = data.deaths;
   total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
   recovered.innerText = data.recovered;
   todayCases.innerText = data.todayCases;
+  // chart
+  ctx = document.getElementById("myChart").getContext("2d");
+
+  data = {
+      labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
+      datasets: [{
+          label: "الاصابات (الحالات)",
+          backgroundColor: ["#007BFF", "#ffc107", "#0fd850", "#dc3545"],
+          data: [data.cases - (data.deaths + data.recovered), data.deaths, data.recovered, data.todayCases]
+      }]
+  },
+  myChart = new Chart(ctx, {
+    type: "doughnut",
+    data: data,
+    options: {}
+  });
 }).catch((e)=> {
   alert("خطأ في جلب البيانات. أعد المحاولة لاحقاً");
 });
 
-ctx = document.getElementById("myChart").getContext("2d"),
-data = {
-    labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
-    datasets: [{
-        label: "الاصابات (الحالات)",
-        backgroundColor: ["#007BFF", "#ffc107", "#0fd850", "#dc3545"],
-        data: [data.cases - (data.deaths + data.recovered), data.deaths, data.recovered, data.todayCases]
-    }]
-},
-options = {},
-myChart = new Chart(ctx, {
-  type: "doughnut",
-  data: data,
-  options: options
-});
 
 // heatmap
 let heatmap = L.map('heatmap').setView([28.50, 3.6], 4.5);
