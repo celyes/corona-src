@@ -1,6 +1,6 @@
 if(window.top != window.self){top.location.href = document.location.href;}
 
-import { heatCases } from './addresses' as addressPoints;
+import { addressPoints } from './addresses';
 
 let casesTable = require('./casestable.js');
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
