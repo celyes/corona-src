@@ -11,7 +11,7 @@
     <meta property="og:image" content="https://corona-dz.now.sh/assets/img/og-image.webp">
     <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="shortcut icon" href="/assets/img/corona.webp">
-    <title> إحصائيات فيروس كورونا في الجزائر</title>
+    <title>إحصائيات فيروس كورونا في الجزائر</title>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
@@ -19,33 +19,34 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="nv">
-          <ul class="navbar-nav m-auto text-right">
+          <ul class="navbar-nav m-auto text-right p-0">
 
             <li class="nav-item">
               <a class="nav-link px-md-4 py-4 active" href="/">الرئيسية</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link px-md-4 py-4 active" href="heatmap.html">الخريطة الحرارية</a>
+              <a class="nav-link px-md-4 py-4 active" href="#">الخريطة الحرارية</a>
             </li>
             <li class="nav-item">
               <a class="nav-link px-md-4 py-4 active" href="tips.html">نصائح للوقاية</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link px-md-4 py-4 active" href="#">التطور الزمني</a>
+              <a class="nav-link px-md-4 py-4 active" href="timeline.html">التطور الزمني</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="container">
-        <div class="row pt-5">
-          <div class="col-12 text-center timeline-info">
-            <h1>سيتم تحديث هذه الصفحة قريبا.</h1>
-          </div>
-        </div>
+
+      <div class="row map-container pt-5 mt-5" id="map-container">
+          <div class="col-md-12" id="map"></div>
       </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/app.bundle.js"></script>
-  </body>
-  </html>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+      <script src="assets/js/app.bundle.js"></script>
+    </body>
+    </html>
