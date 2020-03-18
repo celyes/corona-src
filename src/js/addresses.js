@@ -21,7 +21,7 @@
   let addressPoints = [];
   cases.forEach((x)=> {
     for(let i = 0; i < (x[3] * 15); i++){
-      exported.push([x[1], x[2], 30]);
+      addressPoints.push([x[1], x[2], 30]);
     }
   })
   module.exports = {
