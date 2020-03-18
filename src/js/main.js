@@ -46,4 +46,4 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 /**addressPoints = addressPoints.map(p => [p[0], p[1]]);
 L.heatLayer(addressPoints).addTo(mymap);
 */
-let heat = L.heatLayer(addressPoints, {radius: 40}).addTo(mymap);
+let heat = L.heatLayer(addressPoints).addTo(mymap);
