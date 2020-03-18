@@ -18,7 +18,7 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   recovered.innerText = data.recovered;
   todayCases.innerText = data.todayCases;
 }).catch((e)=> {
-  alert("حدث خطأ ما. اعد المحاولة لاحقا");
+  alert("خطأ في جلب البيانات. أعد المحاولة لاحقاً");
 });
 
 ctx = document.getElementById("myChart").getContext("2d"),
