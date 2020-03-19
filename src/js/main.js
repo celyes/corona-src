@@ -4,7 +4,7 @@ if(window.top != window.self){top.location.href = document.location.href;}
 import { addressPoints } from './addresses';
 
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
-  response.json();
+  return response.json();
 }).then((data) => {
   // data
       cases = document.querySelector("#cases"),
@@ -34,8 +34,6 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     data: chartData,
     options: {}
   });
-}).catch((e)=> {
-  alert("خطأ في جلب البيانات. لن يتم تحديث البيانات بشكل تلقائي");
 });
 
 
