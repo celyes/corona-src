@@ -23,6 +23,7 @@
   },
   "scripts": {
     "webpack": "webpack --mode production",
+    "watch": "webpack --watch",
     "start": "http-server"
   },
   "repository": {

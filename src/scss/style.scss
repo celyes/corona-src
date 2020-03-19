@@ -6,7 +6,7 @@
 
 @import url("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css");
+@import url("https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css");
 
 body {
   font-family: "Markazi Text", serif;
@@ -92,4 +92,13 @@ section h2 {
 #map{
   width: 100vw;
   height: 100%;
+}
+.dataTables_wrapper{
+  width: 100%;
+}
+#cases-by-wilaya{
+  direction: rtl;
+  width: 100% !important;
+  text-align:center;
+  font-size: 22px;
 }

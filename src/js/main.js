@@ -1,18 +1,56 @@
 if(window.top != window.self){top.location.href = document.location.href;}
 
+import { cases, addressPoints } from './addresses';
 
-import { addressPoints } from './addresses';
+jQuery(document).ready( function () { 
+  $("#cases-by-wilaya").DataTable({
+    data: cases,
+    columns: [
+      { title: "الوﻻية" },
+      { title: "الحالات" },
+    ],
+    language: {
+        
+      sEmptyTable:     "ليست هناك بيانات متاحة في الجدول",
+      sLoadingRecords: "جارٍ التحميل...",
+      sProcessing:   "جارٍ التحميل...",
+      sLengthMenu:   "أظهر _MENU_ مدخلات",
+      sZeroRecords:  "لم يعثر على أية سجلات",
+      sInfo:         "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+      sInfoEmpty:    "يعرض 0 إلى 0 من أصل 0 سجل",
+      sInfoFiltered: "(منتقاة من مجموع _MAX_ مُدخل)",
+      sInfoPostFix:  "",
+      sSearch:       "ابحث:",
+      sUrl:          "",
+      oPaginate: {
+          sFirst:    "الأول",
+          sPrevious: "السابق",
+          sNext:     "التالي",
+          sLast:     "الأخير"
+      },
+      oAria: {
+          sSortAscending:  ": تفعيل لترتيب العمود تصاعدياً",
+          sSortDescending: ": تفعيل لترتيب العمود تنازلياً"   
+      }
+    },
+    pageLength: 25,
+    order: [[ 1, "desc" ]]    
+  }); 
+} );
+
 
 fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   return response.json();
 }).then((data) => {
+
   // data
 
   let cases = document.querySelector("#cases"),
-  deaths = document.querySelector("#deaths"),
-  total = document.querySelector("#total"),
-  recovered = document.querySelector("#recovered"),
-  todayCases = document.querySelector("#todayCases");
+    deaths = document.querySelector("#deaths"),
+    total = document.querySelector("#total"),
+    recovered = document.querySelector("#recovered"),
+    todayCases = document.querySelector("#todayCases");
+  
   cases.innerText = data.cases - (data.deaths + data.recovered);
   deaths.innerText = data.deaths;
   total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
@@ -22,6 +60,7 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
 
   // chart
   let ctx = document.getElementById("myChart").getContext("2d");
+  
   let chartData = {
       labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
       datasets: [{
@@ -37,8 +76,6 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   });
 });
 
-
-
 // heatmap
 let heatmap = L.map('heatmap').setView([28.50, 3.6], 4.5);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -50,3 +87,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiY2VseWVzIiwiYSI6ImNrN3Z0NjY3cjFjMnIzbnNmYWp2MHc0bDcifQ.lZykGC-yHpwcM6GsOX-GMQ'
 }).addTo(heatmap);
 L.heatLayer(addressPoints).addTo(heatmap);
+
+// cases by wilaya
