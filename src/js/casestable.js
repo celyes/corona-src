@@ -1,5 +1,6 @@
-// let addressPoints = require('./addresses.js');
+
 import { cases } from './addresses';
+
 let container = document.querySelector("#table-container");
 let table = document.createElement("table");
 table.classList.add("table");

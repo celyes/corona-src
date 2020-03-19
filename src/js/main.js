@@ -13,7 +13,6 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   total = document.querySelector("#total"),
   recovered = document.querySelector("#recovered"),
   todayCases = document.querySelector("#todayCases");
-
   cases.innerText = data.cases - (data.deaths + data.recovered);
   deaths.innerText = data.deaths;
   total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
