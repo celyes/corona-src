@@ -41,9 +41,13 @@ git push -u origin dev
 a pull request should contain a title and a precise description of the changes made to the file. it would be something like this:
 
 <PULL_REQUEST_TITLE>
+
 changes are:
+
 <FILE_1>: description of changes
+
 <FILE_2>: description of changes
+
 <FILE_3>: description of changes
 
 ### Issues
