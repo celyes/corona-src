@@ -1,6 +1,6 @@
 // let addressPoints = require('./addresses.js');
-import { cases } from './addresses'
-
+import { cases } from './addresses';
+let container = document.querySelector("#table-container");
 let table = document.createElement("table");
 table.classList.add("table");
 table.setAttribute("id","casesTable");
@@ -14,4 +14,4 @@ cases.forEach((item, i) => {
   row.appendChild(cases);
   table.appendChild(row);
 });
-document.body.appendChild(table);
+container.appendChild(table);
