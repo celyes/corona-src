@@ -52,4 +52,4 @@ changes are:
 
 ### Issues
 
-any issues are welcome. just open it up in the issues section and it will be addressed as soos as they're available
+any issues are welcome. just open it up in the issues section and it will be addressed as soon as available
