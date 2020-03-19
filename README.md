@@ -31,7 +31,7 @@ git checkout -b dev
 5. push the changes to origin repo (your remote repo that you forked earlier...):
 
 ```bash
-git pull -u origin dev
+git push -u origin dev
 ```
 
 6. create a pull request in your repo from dev to master branch.
