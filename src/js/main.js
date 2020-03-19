@@ -62,11 +62,11 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
   let ctx = document.getElementById("myChart").getContext("2d");
   
   let chartData = {
-      labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت", "الحالات الجديدة"],
+      labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت"],
       datasets: [{
           label: "الاصابات (الحالات)",
-          backgroundColor: ["#007BFF", "#ffc107", "#0fd850", "#dc3545"],
-          data: [data.cases - (data.deaths + data.recovered), data.deaths, data.recovered, data.todayCases]
+          backgroundColor: ["#007BFF", "#ffc107", "#0fd850"],
+          data: [data.cases - (data.deaths + data.recovered), data.deaths, data.recovered]
       }]
   },
   myChart = new Chart(ctx, {
