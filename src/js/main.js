@@ -74,10 +74,7 @@ fetch("https://corona.lmao.ninja/countries/algeria").then((response) => {
     data: chartData,
     options: {}
   });
-}).catch(e=>{
-  alert("يتم حاليا تحديث البيانات. الرجاء العودة ﻻحقا.");
 });
-
 // heatmap
 let heatmap = L.map('heatmap').setView([28.50, 3.6], 4.5);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
