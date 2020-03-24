@@ -4,7 +4,8 @@
   "description": "Corona virus real time tracker for Algeria",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "casperjs": "^1.1.4"
+    "casperjs": "^1.1.4",
+    "novelcovid": "^1.0.7-b3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
