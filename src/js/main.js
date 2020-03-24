@@ -12,9 +12,9 @@ jQuery(document).ready( function () {
       { title: "الحالات" },
     ],
     pageLength: 50,
-    order: [[ 1, "desc" ]]    
+    order: [[ 1, "desc" ]]
   }); 
-} );
+});
 
 // data
 fetch("https://corona.lmao.ninja/countries/algeria")
