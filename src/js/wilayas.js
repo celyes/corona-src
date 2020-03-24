@@ -27,5 +27,4 @@ let cases = [
     ["خنشلة",1,35.43583,7.14333], // khenchela
 ];
 
-
 module.exports = cases;

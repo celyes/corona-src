@@ -1,7 +1,6 @@
-if(window.top != window.self){top.location.href = document.location.href;}
-
 import { cases, addressPoints } from './addresses';
 
+// table
 jQuery(document).ready( function () { 
   $("#cases-by-wilaya").DataTable({
     data: cases,
@@ -38,11 +37,10 @@ jQuery(document).ready( function () {
   }); 
 } );
 
-
+// data
 fetch("https://corona.lmao.ninja/countries/algeria")
 .then((response) => { return response.json(); })
 .then((data) => {
-
   let cases = document.querySelector("#cases"),
     deaths = document.querySelector("#deaths"),
     total = document.querySelector("#total"),
@@ -72,7 +70,10 @@ fetch("https://corona.lmao.ninja/countries/algeria")
     data: chartData,
     options: {}
   });
+  
 });
+
+
 // heatmap
 let heatmap = L.map('heatmap').setView([28.50, 3.6], 4.5);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -84,5 +85,3 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiY2VseWVzIiwiYSI6ImNrN3Z0NjY3cjFjMnIzbnNmYWp2MHc0bDcifQ.lZykGC-yHpwcM6GsOX-GMQ'
 }).addTo(heatmap);
 L.heatLayer(addressPoints).addTo(heatmap);
-
-// cases by wilaya
