@@ -11,7 +11,7 @@ jQuery(document).ready( function () {
       { title: "الوﻻية" },
       { title: "الحالات" },
     ],
-    pageLength: 25,
+    pageLength: 50,
     order: [[ 1, "desc" ]]    
   }); 
 } );
