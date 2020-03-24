@@ -1,5 +1,4 @@
-
-let cases = [
+module.exports = [
     ["البليدة",110,36.4889434,2.7685398], // blida
     ["الجزائر العاصمة",42,36.7631,3.0506,], // alger
     ["تيزي وزو",11,36.7169,4.0497], // tizi ouzou
@@ -27,14 +26,3 @@ let cases = [
     ["تيسمسيلت",1,35.60,1.81], // tissemsilt
     ["خنشلة",1,35.43583,7.14333], // khenchela
 ];
-
-let addressPoints = [];
-    cases.forEach((x)=> {
-    for(let i = 0; i < (x[1] * 15); i++){
-      addressPoints.push([x[2], x[3], 30]);
-    }
-})
-module.exports = {
-    addressPoints,
-    cases
-};
