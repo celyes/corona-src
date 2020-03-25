@@ -12,8 +12,8 @@ body {
   overflow: hidden;
 }
 .navbar, .container, .container-fluid{
-  /*filter: blur(3px);
-  -webkit-filter: blur(3px);*/
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }.overlay{
   display: block;
   position: absolute;
