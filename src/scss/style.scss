@@ -9,13 +9,12 @@
 
 body {
   font-family: "Markazi Text", serif;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .navbar, .container, .container-fluid{
   /*filter: blur(3px);
   -webkit-filter: blur(3px);*/
-}
-/*.overlay{
+}.overlay{
   display: block;
   position: absolute;
   width: 100%;
@@ -30,7 +29,7 @@ body {
   display:block;
   position: absolute;
   width:33.3333%;
-  min-height: 250px;
+  min-height: 300px;
   height: auto;
   background: #FFF;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -43,7 +42,7 @@ body {
   @media screen and (max-width: 768px) {
     width:90%;
   }
-}*/
+}
 .navbar-toggler {
   border: none;
 }
