@@ -1,6 +1,4 @@
-import cases from './wilayas';
-
-//let cases = require('./wilayas');
+let cases = require('./wilayas');
 
 let addressPoints = [];
 cases.forEach(x => {
