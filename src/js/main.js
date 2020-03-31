@@ -1,5 +1,9 @@
 import { cases, addressPoints } from './addresses';
 
+document.querySelector('.overlay').style.display = "none";
+document.querySelector('.message').style.display = "none";
+
+
 // table
 jQuery(document).ready( function () { 
   $("#cases-by-wilaya").DataTable({
