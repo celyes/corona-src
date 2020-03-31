@@ -18,8 +18,8 @@ jQuery(document).ready( function () {
 
 // data
 fetch("https://corona.lmao.ninja/countries/algeria")
-.then((response) => { return response.json(); })
-.then((data) => {
+.then(r =>  r.json())
+.then(data => {
   let cases = document.querySelector("#cases"),
     deaths = document.querySelector("#deaths"),
     total = document.querySelector("#total"),
