@@ -23,20 +23,21 @@ jQuery(document).ready( function () {
 });
 
 // data
-fetch("https://corona.lmao.ninja/countries/algeria")
-.then(r =>  r.json())
-.then(data => {
-  let cases = document.querySelector("#cases"),
-    deaths = document.querySelector("#deaths"),
-    total = document.querySelector("#total"),
-    recovered = document.querySelector("#recovered"),
-    todayCases = document.querySelector("#todayCases");
-  
-  cases.innerText = data.cases - (data.deaths + data.recovered);
-  deaths.innerText = data.deaths;
-  total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
-  recovered.innerText = data.recovered;
-  todayCases.innerText = data.todayCases;
+if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+  fetch("https://corona.lmao.ninja/countries/algeria")
+  .then(r =>  r.json())
+  .then(data => {
+    let cases = document.querySelector("#cases"),
+      deaths = document.querySelector("#deaths"),
+      total = document.querySelector("#total"),
+      recovered = document.querySelector("#recovered"),
+      todayCases = document.querySelector("#todayCases");
+    
+    cases.innerText = data.cases - (data.deaths + data.recovered);
+    deaths.innerText = data.deaths;
+    total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
+    recovered.innerText = data.recovered;
+    todayCases.innerText = data.todayCases;
 
 
   // chart
@@ -70,6 +71,7 @@ fetch("https://corona.lmao.ninja/countries/algeria")
   });
   
 });
+}
 
 
 // heatmap
