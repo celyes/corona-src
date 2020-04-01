@@ -1,6 +1,6 @@
 ### Corona virus live statistics and heatmap in Algeria
 
-realtime corona virus (COVID-19) tracking in Algeria
+realtime corona virus (COVID-19) tracker for Algeria
 
 ### Introduction
 
