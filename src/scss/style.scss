@@ -122,7 +122,10 @@ section h2 {
   direction: rtl;
 }
 .map-container{
-  height: 650px;
+  height: calc(100vh - 84px);
+  @media screen and (max-width: 992px) {
+    height: calc(100vh - 38px);
+  }
 }
 #map{
   width: 100vw;
