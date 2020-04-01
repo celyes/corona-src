@@ -51,7 +51,18 @@ fetch("https://corona.lmao.ninja/countries/algeria")
   myChart = new Chart(ctx, {
     type: "pie",
     data: chartData,
-    options: {}
+    options: {
+      tooltips: { 
+        borderColor: 'rgba(180,180,180,0.5)',
+        borderWidth: 1,
+        backgroundColor: '#FFF',
+        titleFontSize: 16,
+        titleFontColor: '#0066ff',
+        bodyFontColor: '#000',
+        bodyFontSize: 14,
+        displayColors: false
+      }
+    }
   });
   
 });
