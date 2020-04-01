@@ -58,7 +58,7 @@ if(window.location.pathname == "/" || window.location.pathname == "/index.html")
     data: chartData,
     options: {
       tooltips: { 
-        borderColor: 'rgba(180,180,180,0.5)',
+        borderColor: 'rgba(0,123,255,0.75)',
         borderWidth: 1,
         backgroundColor: '#FFF',
         titleFontSize: 16,
