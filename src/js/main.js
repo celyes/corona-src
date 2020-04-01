@@ -6,18 +6,20 @@ document.querySelector('.message').style.display = "none";
 
 // table
 jQuery(document).ready( function () { 
-  $("#cases-by-wilaya").DataTable({
-    data: cases,
-    language: {
-      url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Arabic.json"
-    },
-    columns: [
-      { title: "الوﻻية" },
-      { title: "الحالات" },
-    ],
-    pageLength: 25,
-    order: [[ 1, "desc" ]]
-  }); 
+  if(window.location.pathname == "/cases-by-wilaya.html"){
+    $("#cases-by-wilaya").DataTable({
+      data: cases,
+      language: {
+        url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Arabic.json"
+      },
+      columns: [
+        { title: "الوﻻية" },
+        { title: "الحالات" },
+      ],
+      pageLength: 25,
+      order: [[ 1, "desc" ]]
+    }); 
+  }
 });
 
 // data
