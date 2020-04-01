@@ -49,7 +49,7 @@ fetch("https://corona.lmao.ninja/countries/algeria")
       }]
   },
   myChart = new Chart(ctx, {
-    type: "doughnut",
+    type: "pie",
     data: chartData,
     options: {}
   });
