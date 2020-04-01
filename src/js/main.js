@@ -44,7 +44,9 @@ fetch("https://corona.lmao.ninja/countries/algeria")
       labels: ["الحالات قيد التماثل للشفاء","الحالات المتوفاة", "الحالات التي شفيت"],
       datasets: [{
           label: "الاصابات (الحالات)",
-          backgroundColor: ["#007BFF", "#ffc107", "#0fd850"],
+          backgroundColor: ["rgba(0,123,255,0.7)", "rgba(255,193,7,0.7)", "rgba(15,216,80,0.7)"],
+          backgroundColor: ["rgba(0,123,255,1)", "rgba(255,193,7,1)", "rgba(15,216,80,1)"],
+          borderWidth: 1,
           data: [data.cases - (data.deaths + data.recovered), data.deaths, data.recovered]
       }]
   },
@@ -59,7 +61,7 @@ fetch("https://corona.lmao.ninja/countries/algeria")
         titleFontSize: 16,
         titleFontColor: '#0066ff',
         bodyFontColor: '#000',
-        bodyFontSize: 14,
+        bodyFontSize: 16,
         displayColors: false
       }
     }
