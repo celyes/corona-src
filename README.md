@@ -40,6 +40,7 @@ git push -u origin dev
 ### Pull request characteristics:
 a pull request should contain a title and a precise description of the changes made to the file. it would be something like this:
 
+```
 <PULL_REQUEST_TITLE>
 
 changes are:
@@ -49,7 +50,9 @@ changes are:
 <FILE_2>: description of changes
 
 <FILE_3>: description of changes
+```
+any pull request that doesn't follow this scheme will be rejected.
 
 ### Issues
 
-any issues are welcome. just open it up in the issues section and it will be addressed as soon as available
+Issues are welcome. just open it up in the issues section and it will be addressed as soon as possible.
