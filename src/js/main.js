@@ -86,5 +86,5 @@ if(window.location.pathname == "/heatmap.html"){
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiY2VseWVzIiwiYSI6ImNrN3Z0NjY3cjFjMnIzbnNmYWp2MHc0bDcifQ.lZykGC-yHpwcM6GsOX-GMQ'
   }).addTo(heatmap);
-  L.heatLayer(addressPoints, {radius: 12}).addTo(heatmap);
+  L.heatLayer(addressPoints, {radius: 15}).addTo(heatmap);
 }
