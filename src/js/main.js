@@ -1,9 +1,5 @@
 import { cases, addressPoints } from './addresses';
 
-document.querySelector('.overlay').style.display = "none";
-document.querySelector('.message').style.display = "none";
-
-
 // table
 jQuery(document).ready( function () { 
   if(window.location.pathname == "/cases-by-wilaya.html"){
