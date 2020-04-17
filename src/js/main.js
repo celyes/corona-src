@@ -20,7 +20,7 @@ jQuery(document).ready( function () {
 
 // data
 if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
-  fetch("https://corona.lmao.ninja/countries/algeria")
+  fetch("https://corona.lmao.ninja/v2/countries/algeria")
   .then(r =>  r.json())
   .then(data => {
     let cases = document.querySelector("#cases"),
