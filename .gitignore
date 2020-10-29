@@ -2,6 +2,3 @@
 node_modules/
 vendor/
 .now
-
-#files
-test.js
