@@ -11,6 +11,9 @@ body {
   font-family: "Markazi Text", serif;
   /*overflow: hidden;*/
 }
+.small, small {
+  font-size: 100% !important;
+}
 /*
 .navbar, .container, .container-fluid{
   filter: blur(3px);
