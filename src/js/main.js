@@ -20,7 +20,7 @@ jQuery(document).ready( function () {
 
 // data
 if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
-  fetch("https://corona.lmao.ninja/v2/countries/algeria")
+  fetch("https://disease.sh/v3/covid-19/countries/algeria")
   .then(r =>  r.json())
   .then(data => {
     let cases = document.querySelector("#cases"),
@@ -33,10 +33,10 @@ if(window.location.pathname == "/" || window.location.pathname == "/index.html")
     deaths.innerText = data.deaths;
     total.innerText = "عدد الحالات الإجمالي: " + data.cases + " حالة ";
     recovered.innerText = data.recovered;
-    todayCases.innerText = data.todayCases;
+    todayCases.innerText = data.todayCases; // modify statically
 
 
-  // chart
+  // initiate chart
   let ctx = document.getElementById("myChart").getContext("2d");
   
   let chartData = {
