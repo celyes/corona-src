@@ -1,6 +1,6 @@
 if test -z "$1"
 then
-	echo "\e[31;1mBundling and deployment stopped. Please provide a commit message!\e[0m"
+	echo "\e[31;1mPlease provide a commit message!\e[0m"
 	exit 1
 fi
 
